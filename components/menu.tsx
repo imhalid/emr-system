@@ -8,7 +8,7 @@ import Seperator from './ui/seperator'
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState('Anasayfa');
 
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const containerControls = useAnimationControls()
   const svgControls = useAnimationControls()
@@ -84,7 +84,6 @@ const Menu = () => {
       </Link>
       <Seperator />
       <div
-
         className='flex flex-col mt-2 h-full'
       >
         <div className='gap-2 flex flex-col'>
@@ -94,18 +93,12 @@ const Menu = () => {
               className={`flex items-center cursor-pointer rounded-[4px] p-1 gap-2 ${selectedMenu === item.name ? 'bg-[#2F3138] text-[#E0E1E8] outline outline-[#36373E]' : ''}`}
               onClick={() => setSelectedMenu(item.name)}
             >
-
               <Image
                 className={`${selectedMenu === item.name ? 'glow-menu-logo' : ''}`}
                 src={item.icon} width={24} height={24} alt={item.name} />
-
-
               <span
-
                 className='text-nowrap text-inherit font-poppins overflow-hidden whitespace-nowrap tracking-wide'>{item.name}
               </span>
-
-
             </button>
           ))}
         </div>
