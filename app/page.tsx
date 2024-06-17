@@ -1,7 +1,11 @@
+import MainArea from "@/components/main-area";
+import Menu from "@/components/menu";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      EMR System
+    <main className="h-screen flex flex-row-reverse flex-1">
+      <MainArea />
+      <Menu />
     </main>
   );
 }

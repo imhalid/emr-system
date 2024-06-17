@@ -6,4 +6,7 @@
   .text-balance {
     text-wrap: balance;
   }
+  .glow-menu-logo {
+    filter: drop-shadow(0 0 0.35rem #FBFBFB70);
+  }
 }
