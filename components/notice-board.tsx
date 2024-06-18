@@ -10,7 +10,7 @@ const NoticeBoard = () => {
         </div>
       </div>
       <div className="outline-[#DCDCDC] max-h-96 overflow-y-auto rounded-b-lg gap-5 outline-1 outline bg-white flex p-3 relative">
-        <NoticeBoardItems items={[]} />
+        <NoticeBoardItems />
       </div>
     </div>
   )

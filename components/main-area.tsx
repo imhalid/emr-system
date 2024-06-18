@@ -1,16 +1,18 @@
 import Navbar from "./navbar"
 import NoticeBoard from "./notice-board"
 import PatientInfo from "./patient-info"
+import PatientList from "./patient-list"
 
 const MainArea = () => {
   return (
     <div className="bg-[#F1EFEE] w-full">
       <Navbar />
-      <div className="p-4">
+      <div className="p-4 max-w-7xl mx-auto flex flex-col gap-4">
         <div className="flex gap-4">
-      <PatientInfo />
-      <NoticeBoard />
+          <PatientInfo />
+          <NoticeBoard />
         </div>
+        <PatientList />
       </div>
     </div>
   )
