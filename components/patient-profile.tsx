@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PatientProfile = () => {
   return (
-    <div className=" min-w-52 max-w-64 sticky top-0">
+    <div className=" min-w-64 max-w-72 sticky top-0">
       <div className="flex gap-2">
         <Image src="/patient-profile.jpg" width={90} height={90} alt="profile" quality={100} className="rounded-md" />
         <div className="flex flex-col gap-2 justify-between">

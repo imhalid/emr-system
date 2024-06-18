@@ -11,17 +11,17 @@ import {
 const PatientHistory = () => {
 
   return (
-    <div className='flex flex-col  pb-2'>
-      <Accordion type="single" collapsible defaultValue="0001" >
+    <div className='flex flex-col w-full pb-2'>
+      <Accordion key="value1" type="single" collapsible defaultValue="0001" >
       {history.map((item: historyItem) => (
         <>
-          <AccordionItem key={item.id} value={item.id} className='w-[460px]'>
+          <AccordionItem key={item.details.result} value={item.id} className='w-full'>
             <AccordionTrigger >
               <h3 className="text-xs text-[#222126] font-medium ">{item.date} / {item.department}</h3>
             </AccordionTrigger>
             <AccordionContent>
               <div className='px-3'>
-                <div className="flex flex-row gap-10  px-3 py-2 outline outline-1 outline-[#F8F8F7]  rounded-b-lg">
+                <div className="flex flex-row gap-10 justify-between  px-3 py-2 outline outline-1 outline-[#F8F8F7]  rounded-b-lg">
                   <div className="flex-col gap-3 flex min-w-48">
                     <div>
                       <p className="text-xs text-[#8C8C8C] uppercase font-medium">Tarih / Saat</p>

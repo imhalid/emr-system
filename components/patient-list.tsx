@@ -12,7 +12,7 @@ const statusClasses: { [key: string]: string } = {
 const PatientList = () => {
   return (
     <div className="">
-      <table className="min-w-full bg-[#FBFBFB]   outline outline-1 outline-[#DCDCDC] rounded-t-lg">
+      <table className="min-w-full bg-[#FBFBFB]   outline outline-1 outline-[#DCDCDC] rounded-lg overflow-hidden">
         <thead>
           <tr className="text-[#656565] text-sm border-b text-left">
             <th className="py-2 px-4 ">No</th>
@@ -26,7 +26,7 @@ const PatientList = () => {
             <th className="py-2 px-4">Actions</th>
           </tr>
         </thead>
-        <tbody className="overflow-y-auto max-h-96">
+        <tbody className="">
           {PatientListData.map((patient, index) => (
             <tr key={index} className={
               patient.status === "Muayene İptal" ? "bg-gradient-to-r from-[#F2505020] to-[#F2505000]" :
@@ -34,7 +34,8 @@ const PatientList = () => {
                   "bg-white"
             }>
               <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.no}</td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2]">{patient.name}</td>
+              <td className="py-2 px-4 border-b border-[#F2F2F2]">
+              {patient.name}</td>
               <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.tckn}</td>
               <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.age}</td>
               <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.gender}</td>
@@ -53,7 +54,6 @@ const PatientList = () => {
                 <button className="flex gap-1 text-sm items-center bg-[#F5F5F5] outline-[#DCDCDC] outline-1 outline text-[#222126] px-2 py-1 rounded">
                   <Image src="/icons/patient-info.svg" width={18} height={18} alt="info" />
                   <p>Hasta Bilgileri</p>
-
                 </button>
               </td>
             </tr>

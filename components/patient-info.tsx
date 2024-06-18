@@ -3,7 +3,7 @@ import PatientHistory from "./patient-history"
 import PatientProfile from "./patient-profile"
 const PatientInfo = () => {
   return (
-    <div className="flex flex-col w-fit">
+    <div className="flex flex-col w-full">
       <div className="bg-[#FBFBFB] outline outline-[#DCDCDC] outline-1 rounded-t-lg p-2 flex justify-between">
         <div className="flex gap-2">
           <Image src="./icons/patient-card.svg" width={24} height={24} alt="profile" />
