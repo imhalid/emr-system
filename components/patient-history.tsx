@@ -10,13 +10,12 @@ import {
 
 const PatientHistory = () => {
 
-  console.log(History)
   return (
     <div className='flex flex-col  pb-2'>
       <Accordion type="single" collapsible defaultValue="0001" >
       {history.map((item: historyItem) => (
         <>
-          <AccordionItem value={item.id} className='w-[460px]'>
+          <AccordionItem key={item.id} value={item.id} className='w-[460px]'>
             <AccordionTrigger >
               <h3 className="text-xs text-[#222126] font-medium ">{item.date} / {item.department}</h3>
             </AccordionTrigger>
