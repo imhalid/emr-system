@@ -33,7 +33,7 @@ const Menu = () => {
       transition: {
         type: "ease-in-out",
         damping: 15,
-        duration: 0.5,
+        duration: 0.1,
       },
     },
     open: {
@@ -41,7 +41,7 @@ const Menu = () => {
       transition: {
         type: "ease-in-out",
         damping: 15,
-        duration: 0.5,
+        duration: 0.1,
       },
     },
   }
@@ -52,7 +52,7 @@ const Menu = () => {
       transition: {
         type: "ease-in-out",
         damping: 15,
-        duration: 0.5,
+        duration: 0.1,
       },
     },
     open: {
@@ -60,7 +60,7 @@ const Menu = () => {
       transition: {
         type: "ease-in-out",
         damping: 15,
-        duration: 0.5,
+        duration: 0.1,
       },
     },
   }
