@@ -1,5 +1,8 @@
+'use client'
 import { Patient, PatientListData } from "@/patient-list-data"
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import Image from "next/image";
+import { useState } from "react";
 
 const statusClasses: { [key: string]: string } = {
   "Devam Ediyor": "bg-[#56B13F] text-[#E7FFEC] outline-[#2D7F44]",
@@ -10,24 +13,52 @@ const statusClasses: { [key: string]: string } = {
 };
 
 const PatientList = () => {
+
+  const [filter, setFilter] = useState("Bekleyen");
+
+  const filteredData = PatientListData.filter(patient => {
+    if (filter === "Bekleyen") {
+      return patient.status === "Sırada" || patient.status === "Devam Ediyor";
+    } else if (filter === "Tamamlanan") {
+      return patient.status === "Tamamlandı" || patient.status === "Muayene İptal";
+    } else {
+      return true;
+    }
+  });
+
   return (
     <div className="">
-      <table className="min-w-full bg-[#FBFBFB]   outline outline-1 outline-[#DCDCDC] rounded-lg overflow-hidden">
-        <thead>
-          <tr className="text-[#656565] text-sm border-b text-left">
-            <th className="py-2 px-4 ">No</th>
-            <th className="py-2 px-4">Ad</th>
-            <th className="py-2 px-4">TCKN</th>
-            <th className="py-2 px-4">Yaş</th>
-            <th className="py-2 px-4">Cinsiyet</th>
-            <th className="py-2 px-4">R. Tarihi</th>
-            <th className="py-2 px-4">R. Saati</th>
-            <th className="py-2 px-4">Durum</th>
-            <th className="py-2 px-4">Actions</th>
+      <div className="flex bg-[#E8E7E6] w-fit px-1 rounded-lg outline outline-1 outline-[#DCDCDC] h-9 mb-2">
+        <ToggleGroup type="single" defaultValue="waiting">
+          <ToggleGroupItem value="waiting" aria-label="Toggle waiting" onClick={() => setFilter("Bekleyen")} defaultChecked >
+            Bekleyen
+          </ToggleGroupItem>
+          <ToggleGroupItem value="completed" aria-label="Toggle completed" onClick={() => setFilter("Tamamlanan")}>
+            Tamamlanan
+          </ToggleGroupItem>
+          <ToggleGroupItem value="all" aria-label="Toggle all" onClick={() => setFilter("Tümü")}>
+            Tümü
+          </ToggleGroupItem>
+        </ToggleGroup>
+      </div>
+    <div className="overflow-y-scroll overflow-hidden rounded-lg h-96 hide-scrollbar">
+      <table className="w-full overflow-y-scroll bg-[#FBFBFB] relative  border-collapse">
+        <thead className="sticky top-0 rounded-lg ">
+          
+          <tr className="text-[#656565] text-sm text-left">
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">No</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Ad</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">TCKN</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Yaş</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Cinsiyet</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">R. Tarihi</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">R. Saati</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Durum</th>
+            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Actions</th>
           </tr>
         </thead>
-        <tbody className="">
-          {PatientListData.map((patient, index) => (
+        <tbody className="rounded-lg">
+            {filteredData.map((patient, index) => (
             <tr key={index} className={
               patient.status === "Muayene İptal" ? "bg-gradient-to-r from-[#F2505020] to-[#F2505000]" :
                 patient.status === "Devam Ediyor" ? "bg-gradient-to-r from-[#E2FFE2] to-[#E2FFE200]" :
@@ -60,6 +91,7 @@ const PatientList = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };
