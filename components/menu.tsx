@@ -14,12 +14,15 @@ const Menu = () => {
   const svgControls = useAnimationControls()
 
   useEffect(() => {
+    const mainArea = document.querySelector('#main-area') as HTMLElement;
     if (isOpen) {
       containerControls.start("open")
       svgControls.start("open")
+      mainArea.style.marginLeft = '16rem'
     } else {
       containerControls.start("close")
       svgControls.start("close")
+      mainArea.style.marginLeft = '4.1rem'
     }
   }, [containerControls, isOpen, svgControls])
 
@@ -70,7 +73,7 @@ const Menu = () => {
       variants={containerVariants}
       animate={containerControls}
       initial="close"
-      className="h-full flex flex-col p-4 relative text-[#ADADAD]">
+      className="h-full flex flex-col p-4 left-0 fixed bg-[#222126] text-[#ADADAD]">
       <Link href='/' className='relative h-8 p-1'>
         <motion.div
           variants={clipmaskVariantsLogo}
@@ -116,7 +119,7 @@ const Menu = () => {
         </div>
       </div>
       <button
-        className="absolute bg-[#222126] p-2 rounded-lg -right-2 text-nowrap top-1/2 transform -translate-y-1/2"
+        className={`absolute bg-[#222126] p-2 rounded-lg -right-2 text-nowrap top-1/2 transform -translate-y-1/2 ${isOpen ? 'cursor-w-resize' : 'cursor-e-resize'}`}
         onClick={handleOpenClose}
       >
         <Image

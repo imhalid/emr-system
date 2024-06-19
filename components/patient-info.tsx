@@ -10,11 +10,11 @@ const PatientInfo = () => {
           <p className="text-lg font-medium">Hasta Bilgileri</p>
         </div>
         <div className="flex gap-2">
-          <button className="flex p-1 px-2 rounded-[5px] items-center gap-1 text-sm bg-white outline-1 outline outline-[#DCDCDC]">
+          <button className="flex p-1 px-2 rounded-[5px] items-center gap-1 text-sm bg-white outline-1 outline outline-[#DCDCDC] hover:bg-[#F5F5F5] active:bg-[#E5E5E5]">
             <Image src="./icons/new-prescription.svg" width={18} height={18} alt="edit" />
             <p>Yeni Reçete</p>
           </button>
-          <button className="flex p-1 px-2 rounded-[5px] items-center gap-1 text-sm bg-white outline-1 outline outline-[#DCDCDC]">
+          <button className="flex p-1 px-2 rounded-[5px] items-center gap-1 text-sm bg-white outline-1 outline outline-[#DCDCDC] hover:bg-[#F5F5F5] active:bg-[#E5E5E5]">
             <Image src="./icons/new-appointment.svg" width={18} height={18} alt="edit" />
             <p>Yeni Randevu</p>
           </button>

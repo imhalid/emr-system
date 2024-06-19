@@ -3,9 +3,9 @@ import Menu from "@/components/menu";
 
 export default function Home() {
   return (
-    <main className="h-screen flex flex-row-reverse flex-1">
+    <main className=" flex flex-row-reverse flex-1 relative">
       <MainArea />
-      <Menu />
+        <Menu />
     </main>
   );
 }

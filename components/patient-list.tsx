@@ -41,57 +41,58 @@ const PatientList = () => {
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
-    <div className="overflow-y-scroll overflow-hidden rounded-lg h-96 hide-scrollbar">
-      <table className="w-full overflow-y-scroll bg-[#FBFBFB] relative  border-collapse">
-        <thead className="sticky top-0 rounded-lg ">
-          
-          <tr className="text-[#656565] text-sm text-left">
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">No</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Ad</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">TCKN</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Yaş</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Cinsiyet</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">R. Tarihi</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">R. Saati</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Durum</th>
-            <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Actions</th>
-          </tr>
-        </thead>
-        <tbody className="rounded-lg">
-            {filteredData.map((patient, index) => (
-            <tr key={index} className={
-              patient.status === "Muayene İptal" ? "bg-gradient-to-r from-[#F2505020] to-[#F2505000]" :
-                patient.status === "Devam Ediyor" ? "bg-gradient-to-r from-[#E2FFE2] to-[#E2FFE200]" :
-                  "bg-white"
-            }>
-              <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.no}</td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2]">
-              {patient.name}</td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.tckn}</td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.age}</td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.gender}</td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.regDate}</td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.regTime}</td>
-              <td className={`py-2 px-4 border-b border-[#F2F2F2] text-left`}>
-                <p className={`w-fit text-xs px-1.5 rounded-full outline outline-2 font-medium ${statusClasses[patient.status]}`}>
-                  {patient.status}
-                </p>
-              </td>
-              <td className="py-2 px-4 border-b border-[#F2F2F2] text-left gap-2 flex ">
-                <button className="flex gap-1 text-sm items-center bg-[#F5F5F5] outline-[#DCDCDC] outline-1 outline text-[#222126] px-2 py-1 rounded">
-                  <Image src="/icons/patient-call.svg" width={18} height={18} alt="call" />
-                  <p>Hastayi Çağır</p>
-                </button>
-                <button className="flex gap-1 text-sm items-center bg-[#F5F5F5] outline-[#DCDCDC] outline-1 outline text-[#222126] px-2 py-1 rounded">
-                  <Image src="/icons/patient-info.svg" width={18} height={18} alt="info" />
-                  <p>Hasta Bilgileri</p>
-                </button>
-              </td>
+
+      <div className="overflow-y-scroll rounded-lg h-[30rem] p-[1px] hide-scrollbar">
+        <table className="w-full overflow-y-scroll bg-[#FBFBFB] relative">
+          <thead className="sticky top-0 rounded-t-lg outline outline-1 outline-[#DCDCDC]">
+
+            <tr className="text-[#656565] text-sm text-left">
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">No</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Ad</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">TCKN</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Yaş</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Cinsiyet</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">R. Tarihi</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">R. Saati</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Durum</th>
+              <th className="py-2 px-4 bg-[#FBFBFB] outline outline-1 outline-[#DCDCDC]">Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody className="rounded-lg">
+            {filteredData.map((patient, index) => (
+              <tr key={index} className={
+                patient.status === "Muayene İptal" ? "bg-gradient-to-r from-[#F2505020] to-[#F2505000]" :
+                  patient.status === "Devam Ediyor" ? "bg-gradient-to-r from-[#E2FFE2] to-[#E2FFE200]" :
+                    "bg-white"
+              }>
+                <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.no}</td>
+                <td className="py-2 px-4 border-b border-[#F2F2F2]">
+                  {patient.name}</td>
+                <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.tckn}</td>
+                <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.age}</td>
+                <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.gender}</td>
+                <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.regDate}</td>
+                <td className="py-2 px-4 border-b border-[#F2F2F2] text-left">{patient.regTime}</td>
+                <td className={`py-2 px-4 border-b border-[#F2F2F2] text-left`}>
+                  <p className={`w-fit text-xs px-1.5 rounded-full outline outline-2 font-medium ${statusClasses[patient.status]}`}>
+                    {patient.status}
+                  </p>
+                </td>
+                <td className="py-2 px-4 border-b border-[#F2F2F2] text-left gap-2 flex ">
+                  <button className="flex gap-1 text-sm items-center bg-[#F5F5F5] outline-[#DCDCDC] outline-1 outline text-[#222126] px-2 py-1 rounded hover:bg-[#E5E5E5] active:bg-[#D5D5D5]">
+                    <Image src="/icons/patient-call.svg" width={18} height={18} alt="call" />
+                    <p>Hastayi Çağır</p>
+                  </button>
+                  <button className="flex gap-1 text-sm items-center bg-[#F5F5F5] outline-[#DCDCDC] outline-1 outline text-[#222126] px-2 py-1 rounded hover:bg-[#E5E5E5] active:bg-[#D5D5D5]">
+                    <Image src="/icons/patient-info.svg" width={18} height={18} alt="info" />
+                    <p>Hasta Bilgileri</p>
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
