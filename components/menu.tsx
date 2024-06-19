@@ -18,7 +18,7 @@ const Menu = () => {
     if (isOpen) {
       containerControls.start("open")
       svgControls.start("open")
-      mainArea.style.marginLeft = '16rem'
+      mainArea.style.marginLeft = '13rem'
     } else {
       containerControls.start("close")
       svgControls.start("close")
@@ -40,7 +40,7 @@ const Menu = () => {
       },
     },
     open: {
-      width: "16rem",
+      width: "13rem",
       transition: {
         type: "ease-in-out",
         damping: 15,
