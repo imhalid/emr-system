@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="flex gap-3 justify-end items-center px-4">
         <div className="relative">
           <Image className="absolute top-1/2 left-2 transform -translate-y-1/2" src="/icons/search.svg" width={20} height={20} alt="search" />
-          <input type="text" placeholder="Hasta ara" className="bg-white w-[200px] h-[40px] rounded-lg pl-9 pr-4 placeholder-[#D5D5D5]" />
+          <input type="text" placeholder="Hasta ara" className="bg-white w-[200px] h-[40px] rounded-lg pl-9 pr-4 placeholder-[#D5D5D5] outline outline-1 outline-[#D5D5D5]" />
         </div>
         <Popover>
           <PopoverTrigger>
