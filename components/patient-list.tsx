@@ -27,7 +27,7 @@ const PatientList = () => {
   });
 
   return (
-    <div className="">
+    <div className="relative">
       <div className="flex bg-[#E8E7E6] w-fit px-1 rounded-lg outline outline-1 outline-[#DCDCDC] h-9 mb-2">
         <ToggleGroup type="single" defaultValue="waiting">
           <ToggleGroupItem value="waiting" aria-label="Toggle waiting" onClick={() => setFilter("Bekleyen")} defaultChecked >
@@ -41,7 +41,7 @@ const PatientList = () => {
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
-
+      <div className="bg-gradient-to-t pointer-events-none from-[#FBFBFB] to-[#FBFBFB00] rounded-lg  absolute bottom-0 left-0 w-full h-12 z-10"></div>
       <div className="overflow-y-scroll rounded-lg h-[30rem] p-[1px] hide-scrollbar">
         <table className="w-full overflow-y-scroll bg-[#FBFBFB] relative">
           <thead className="sticky top-0 rounded-t-lg outline outline-1 outline-[#DCDCDC]">

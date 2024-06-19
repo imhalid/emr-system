@@ -2,7 +2,7 @@ export type Notice = {
 id: string;
 title: string;
   content: string;
-  status: 'urgent' | 'update' | 'standard';
+  status: 'urgent' | 'update' | 'standard' | string;
   date: string;
 };
 

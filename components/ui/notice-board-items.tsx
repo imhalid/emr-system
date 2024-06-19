@@ -3,7 +3,7 @@ import { NoticeBoardData, Notice, NoticeBoardType } from "@/notice-board-data"
 import Image from "next/image"
 const NoticeBoardItems = () => {
   return (
-    <div className="w-full max-w-96">
+    <div className="w-full max-w-96 relative">
       {NoticeBoardData.map((data) => (
         <Items key={data.id} data={data} />
       ))}

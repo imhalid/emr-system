@@ -12,6 +12,7 @@ const PatientHistory = () => {
 
   return (
     <div className='flex flex-col w-full pb-2'>
+      
       <Accordion key="value1" type="single" collapsible defaultValue="0001" >
       {history.map((item: historyItem) => (
         <>
