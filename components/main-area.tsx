@@ -2,6 +2,7 @@ import Navbar from "./navbar";
 import NoticeBoard from "./notice-board";
 import PatientInfo from "./patient-info";
 import PatientList from "./patient-list";
+import MobileMenu from "./mobile-menu";
 
 const MainArea = () => {
   return (

@@ -2,13 +2,28 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-import Image from "next/image"
+} from "@/components/ui/popover";
+import Image from "next/image";
 const Notification = () => {
   return (
     <Popover>
       <PopoverTrigger>
-        <Image src="/icons/notification.svg" width={24} height={24} alt="notification" />
+        <Image
+          className="lg:hidden inline"
+          color="red"
+          src="/icons/m-notification.svg"
+          width={24}
+          height={24}
+          alt="notification"
+        />
+        <Image
+          className="hidden lg:inline"
+          color="red"
+          src="/icons/notification.svg"
+          width={24}
+          height={24}
+          alt="notification"
+        />
       </PopoverTrigger>
       <PopoverContent className="mt-4">
         <div className="flex flex-col">
@@ -22,7 +37,7 @@ const Notification = () => {
         </div>
       </PopoverContent>
     </Popover>
-  )
-}
+  );
+};
 
-export default Notification
+export default Notification;
