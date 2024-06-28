@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className=" flex flex-row-reverse flex-1 relative">
       <MainArea />
-        <Menu />
+      {/* <Menu /> */}
     </main>
   );
 }

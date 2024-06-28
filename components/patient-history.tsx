@@ -22,7 +22,7 @@ const PatientHistory = () => {
             </AccordionTrigger>
             <AccordionContent>
               <div className='px-3'>
-                <div className="flex flex-row gap-10 justify-between  px-3 py-2 outline outline-1 outline-[#F8F8F7]  rounded-b-lg">
+                <div className="flex md:flex-row flex-col gap-10 justify-between  px-3 py-2 outline outline-1 outline-[#F8F8F7]  rounded-b-lg">
                   <div className="flex-col gap-3 flex min-w-48">
                     <div>
                       <p className="text-xs text-[#8C8C8C] uppercase font-medium">Tarih / Saat</p>
@@ -34,7 +34,7 @@ const PatientHistory = () => {
                     </div>
                     <div>
                       <p className="text-xs text-[#8C8C8C] uppercase font-medium">Yapılan Tetkikler</p>
-                      <p className="text-sm text-[#222126]">{item.details.prescribed_medications}</p>
+                      <p className="text-sm text-[#222126]">{item.details.tests_conducted}</p>
                     </div>
                     <div>
                       <p className="text-xs text-[#8C8C8C] uppercase font-medium">Yazılan İlaçlar</p>

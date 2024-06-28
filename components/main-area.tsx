@@ -10,9 +10,9 @@ const MainArea = () => {
       <div className="bg-[#F1EFEE] p-4 max-w-7xl mx-auto flex flex-col gap-4">
         <div className="flex gap-4 justify-between">
           <PatientInfo />
-          <NoticeBoard />
+          {/* <NoticeBoard /> */}
         </div>
-        <PatientList />
+        {/* <PatientList /> */}
       </div>
     </div>
   )
