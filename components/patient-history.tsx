@@ -57,7 +57,7 @@ const PatientHistory = () => {
                           Yazılan İlaçlar
                         </p>
                         <p className="text-sm text-[#222126]">
-                          Sumatriptan (100 mg)
+                          {item.details.prescribed_medications}
                         </p>
                       </div>
                       <div>

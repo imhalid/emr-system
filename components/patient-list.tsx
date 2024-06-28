@@ -3,7 +3,8 @@ import { Patient, PatientListData } from "@/patient-list-data";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import Image from "next/image";
 import { useState } from "react";
-import { useMediaQuery } from "@uidotdev/usehooks";
+// import { useMediaQuery } from "@uidotdev/usehooks";
+import { useMediaQuery } from 'react-responsive'
 
 const statusClasses: { [key: string]: string } = {
   "Devam Ediyor": "bg-[#56B13F] text-[#E7FFEC] outline-[#2D7F44]",
@@ -22,7 +23,7 @@ const statusLineBGClasses: { [key: string]: string } = {
 };
 
 const PatientList = () => {
-  const isMediumDevice = useMediaQuery("(width <= 1025px)");
+  const isMediumDevice = useMediaQuery({query: "(width <= 1024px)"});
 
   const [filter, setFilter] = useState("Bekleyen");
 
@@ -40,7 +41,7 @@ const PatientList = () => {
 
   return (
     <div className="relative">
-      <div className="flex lg:bg-[#E8E7E6] bg-[#fbfbfb] lg:w-fit w-full px-1 lg:rounded-lg rounded-t-lg outline outline-1 outline-[#DCDCDC] h-9 lg:mb-2">
+      <div className="flex lg:bg-[#E8E7E6] bg-[#efefef] lg:w-fit w-full px-1 lg:rounded-lg rounded-t-lg outline outline-1 outline-[#DCDCDC] h-9 lg:mb-2">
         <ToggleGroup
           className="w-full justify-between lg:w-fit"
           type="single"
@@ -70,7 +71,7 @@ const PatientList = () => {
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
-      <div className="overflow-y-scroll lg:rounded-lg rounded-b-lg outline outline-[#DCDCDC] outline-1 lg:outline-none h-[30rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-none gap-3 w-full lg:p-[1px] p-3 bg-white hide-scrollbar">
+      <div className="overflow-y-scroll lg:rounded-lg rounded-b-lg outline outline-[#DCDCDC] outline-1 lg:outline-none min-h-[10rem] max-h-[37rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-none gap-3 w-full lg:p-[1px] p-3 bg-white hide-scrollbar">
         {isMediumDevice ? (
           filteredData.map((patient, index) => (
             <div

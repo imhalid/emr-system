@@ -3,7 +3,7 @@ import PatientHistory from "./patient-history";
 import PatientProfile from "./patient-profile";
 const PatientInfo = () => {
   return (
-    <div className="flex flex-col w-full relative">
+    <div className="flex flex-col w-full relative mt-16 lg:mt-0">
       <div className="bg-[#FBFBFB] outline outline-[#DCDCDC] outline-1 rounded-t-lg p-2 flex justify-between items-center">
         <div className="flex gap-1">
           <Image
