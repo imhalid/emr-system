@@ -1,7 +1,7 @@
-import Navbar from "./navbar"
-import NoticeBoard from "./notice-board"
-import PatientInfo from "./patient-info"
-import PatientList from "./patient-list"
+import Navbar from "./navbar";
+import NoticeBoard from "./notice-board";
+import PatientInfo from "./patient-info";
+import PatientList from "./patient-list";
 
 const MainArea = () => {
   return (
@@ -12,10 +12,10 @@ const MainArea = () => {
           <PatientInfo />
           {/* <NoticeBoard /> */}
         </div>
-        {/* <PatientList /> */}
+        <PatientList />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MainArea
+export default MainArea;
