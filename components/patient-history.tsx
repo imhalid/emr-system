@@ -13,7 +13,6 @@ const PatientHistory = () => {
     <div className="flex flex-col w-full pb-2">
       <Accordion key="value1" type="single" collapsible defaultValue="0001">
         {history.map((item: historyItem) => (
-          <>
             <AccordionItem
               key={item.details.result}
               value={item.id}
@@ -111,7 +110,6 @@ const PatientHistory = () => {
                 </div>
               </AccordionContent>
             </AccordionItem>
-          </>
         ))}
       </Accordion>
     </div>

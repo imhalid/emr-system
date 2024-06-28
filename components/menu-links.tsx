@@ -10,13 +10,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+
 import NoticeBoard from "./notice-board";
 
-import { useMediaQuery } from "react-responsive";
+import { useMatchMedia } from "@/lib/useMatchMedia"
 
 const MobileLinks = () => {
   const [selectedMenu, setSelectedMenu] = useState("Anasayfa");
-  const isLargeDevice = useMediaQuery({query: "(width >= 1024px)"})
+  const isLargeDevice = useMatchMedia("(width >= 1024px)", true)
   return (
     <div className="flex flex-col mt-2 h-full">
       <div className="gap-2 flex flex-col">

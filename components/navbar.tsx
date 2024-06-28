@@ -5,9 +5,6 @@ import MenuLinks from "./menu-links";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 const Navbar = () => {

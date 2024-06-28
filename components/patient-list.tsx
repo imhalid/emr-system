@@ -3,8 +3,7 @@ import { Patient, PatientListData } from "@/patient-list-data";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import Image from "next/image";
 import { useState } from "react";
-// import { useMediaQuery } from "@uidotdev/usehooks";
-import { useMediaQuery } from 'react-responsive'
+import { useMatchMedia } from "@/lib/useMatchMedia"
 
 const statusClasses: { [key: string]: string } = {
   "Devam Ediyor": "bg-[#56B13F] text-[#E7FFEC] outline-[#2D7F44]",
@@ -23,7 +22,7 @@ const statusLineBGClasses: { [key: string]: string } = {
 };
 
 const PatientList = () => {
-  const isMediumDevice = useMediaQuery({query: "(width <= 1024px)"});
+  const isMediumDevice = useMatchMedia("(width <= 1024px)", true);
 
   const [filter, setFilter] = useState("Bekleyen");
 
