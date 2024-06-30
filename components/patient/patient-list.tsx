@@ -3,7 +3,7 @@ import { Patient, PatientListData } from "@/patient-list-data";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import Image from "next/image";
 import { useState } from "react";
-import { useMatchMedia } from "@/lib/useMatchMedia"
+import { useMatchMedia } from "@/lib/useMatchMedia";
 
 const statusClasses: { [key: string]: string } = {
   "Devam Ediyor": "bg-[#56B13F] text-[#E7FFEC] outline-[#2D7F44]",

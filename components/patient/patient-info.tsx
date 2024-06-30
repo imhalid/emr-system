@@ -3,7 +3,7 @@ import PatientHistory from "./patient-history";
 import PatientProfile from "./patient-profile";
 const PatientInfo = () => {
   return (
-    <div className="flex flex-col w-full relative mt-16 lg:mt-0">
+    <div className="flex flex-col w-full relative mt-16  lg:mt-0">
       <div className="bg-[#FBFBFB] outline outline-[#DCDCDC] outline-1 rounded-t-lg p-2 flex justify-between items-center">
         <div className="flex gap-1">
           <Image
@@ -36,7 +36,7 @@ const PatientInfo = () => {
         </div>
       </div>
       <div className="bg-gradient-to-t pointer-events-none from-[#FBFBFB] to-[#FBFBFB00] rounded-lg  absolute bottom-0 left-0 w-full h-12 z-10"></div>
-      <div className="outline-[#DCDCDC] max-h-96 overflow-y-auto rounded-b-lg gap-5 outline-1 outline bg-white flex flex-col md:flex-row p-3 relative">
+      <div className="outline-[#DCDCDC] md:max-h-96 max-h-[550px] overflow-y-auto rounded-b-lg gap-5 outline-1 outline bg-white flex flex-col md:flex-row p-3 relative">
         <PatientProfile />
         <div className="min-h-max w-[1px] bg-[#F2F2F2] sticky top-0"></div>
         <PatientHistory />

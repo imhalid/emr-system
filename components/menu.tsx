@@ -12,7 +12,7 @@ const Menu = () => {
   const svgControls = useAnimationControls();
 
   useEffect(() => {
-    console.log("menu rendered")
+    console.log("menu rendered");
     const mainArea = document.querySelector("#main-area") as HTMLElement;
     if (isOpen) {
       containerControls.start("open");

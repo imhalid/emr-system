@@ -13,7 +13,8 @@
 ## ✨✨✨✨✨✨✨✨✨✨✨✨✨✨
 ![Uygulama Tasarımı](uygulama-ve-el-ilanı/site-tasarımı.png)
 ## ✨✨✨✨✨✨✨✨✨✨✨✨✨✨
-![El İlanı](uygulama-ve-el-ilanı/el-ilanı-tasarımı.png)
+![El İlanı Ön Yüz](uygulama-ve-el-ilanı/v2-el-ilanı-önyüz.png)
+![El İlanı Arka Yüz](uygulama-ve-el-ilanı/v2-el-ilanı-arkayüz.png)
 ## ✨✨✨✨✨✨✨✨✨✨✨✨✨✨
 
 Afiş ve El İlanı için Figma Linki: [Figma](https://www.figma.com/design/Xgt3JHi9NcHtn4hOjdOmrV/Electronic-Medical-Record?node-id=0-1&t=manHWg4hHQp4zL6R-1)

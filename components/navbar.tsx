@@ -2,28 +2,27 @@ import Image from "next/image";
 import Profile from "./profile";
 import Notification from "./notification";
 import MenuLinks from "./menu-links";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const Navbar = () => {
   return (
     <div className="bg-[#222126] h-14 lg:bg-[#FBFBFB] py-3 pl-4 fixed left-0 top-0 z-50 w-full lg:relative lg:justify-end flex justify-between items-center">
       <Sheet>
-  <SheetTrigger>
-    <Image
-          className=""
-          src="/icons/m-menu.svg"
-          width={24}
-          height={24}
-          alt="logo"
-        />
-  </SheetTrigger>
-  <SheetContent side={"left"} className="h-full w-[290px] flex flex-col p-4 fixed pt-16 bg-[#222126] text-[#ADADAD] border-none">
-        <MenuLinks />
-  </SheetContent>
-</Sheet>
+        <SheetTrigger>
+          <Image
+            className=""
+            src="/icons/m-menu.svg"
+            width={24}
+            height={24}
+            alt="logo"
+          />
+        </SheetTrigger>
+        <SheetContent
+          side={"left"}
+          className="h-full w-[290px] flex flex-col p-4 fixed pt-16 bg-[#222126] text-[#ADADAD] border-none"
+        >
+          <MenuLinks />
+        </SheetContent>
+      </Sheet>
       <Image
         className="lg:hidden inline mr-auto ml-4"
         color="red"
